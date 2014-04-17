@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: reporter
+  pool: 5
+  username: alok
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: reporter
+  pool: 5
+  username: alok
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: reporter
+  pool: 5
+  username: alok
+  password:
