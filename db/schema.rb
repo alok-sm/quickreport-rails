@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140417162842) do
+ActiveRecord::Schema.define(:version => 20140418181403) do
+
+  create_table "delete_this", :force => true do |t|
+    t.string   "temp"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "posts", :force => true do |t|
     t.text     "description"
