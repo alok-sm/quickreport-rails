@@ -30,12 +30,12 @@ class PostsController < ApplicationController
   end
 
   def report(post)
-    # tweet(
-    #   post.description,
-    #   post.image.path,
-    #   post.lattitude,
-    #   post.longitude
-    # )
+    tweet(
+      post.description,
+      post.image.path,
+      post.lattitude,
+      post.longitude
+    )
 
     ReportMailer.mailReport(
       post.description,
