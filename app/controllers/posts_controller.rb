@@ -18,11 +18,12 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     @post.save
     redirect_to @post, notice: 'Post was successfully created.'
-    report(@post)
+    # report(@post)
   end
 
   def destroy
     @post = Post.find(params[:id])
+    @post.image.destroy
     @post.destroy
     redirect_to '/posts'
   end
