@@ -4,7 +4,3 @@ $client = Twitter::REST::Client.new do |config|
   config.access_token        = '2449177514-TwZWDUockzGrLjI4B0ycz14dSJNM9BSSxhjC4N6'
   config.access_token_secret = 'NsFmPCFimAjZj1vG12haOs3FnDvsiPBVDsxpToLty3lRN'
 end
-
-puts "$$$$$$$$$$$$$$$$$$$$$$$$"
-puts $client.to_json
-puts "$$$$$$$$$$$$$$$$$$$$$$$$"

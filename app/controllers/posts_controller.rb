@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
 
   include TweetHelper
+  include AbsolutePathHelper
 
   def index
     @posts = Post.all
@@ -18,7 +19,7 @@ class PostsController < ApplicationController
     @post = Post.new(params[:post])
     @post.save
     redirect_to @post, notice: 'Post was successfully created.'
-    # report(@post)
+    report(@post)
   end
 
   def destroy
@@ -29,11 +30,20 @@ class PostsController < ApplicationController
   end
 
   def report(post)
-    tweet(
+    # tweet(
+    #   post.description,
+    #   post.image.path,
+    #   post.lattitude,
+    #   post.longitude
+    # )
+
+    ReportMailer.mailReport(
       post.description,
-      post.image.path,
+      getAbsolutePath(post.image.url),
       post.lattitude,
-      post.longitude
-    )
+      post.longitude,
+      "alok.shankar.m@gmail.com"
+    ).deliver
   end
+
 end
