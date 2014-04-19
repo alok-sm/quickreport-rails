@@ -11,12 +11,15 @@ class ReportMailer < ActionMailer::Base
   	)
   	link = 'https://maps.google.com/maps?q=' + lattitude.to_s + '%2C' + longitude.to_s + '&z=17'
   	@params = {
-      :description => description
+      :description => description,
   		:imgurl => imgurl,
   		:mapslink => link,
       :cat => category,
       :hash => hashtag
   	}
-  	mail(:to => recipient, :subject => Rep)
+  	mail(:to => recipient, :subject => 'New Report for '+
+      category+
+      ' on '
+    )
   end
 end

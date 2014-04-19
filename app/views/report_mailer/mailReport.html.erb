@@ -3,9 +3,19 @@
   <head>
   </head>
   <body>
-  	<center><h1>Reporting a <%= @params[:cat] %></h1></center>
-    <img src = <%= @params[:imgurl] %> />
-    <br />
-    <a href = <%= @params[:mapslink] %> >Map</a>
+  	<center>
+  		<h1>
+  			Reporting a <%= @params[:cat] %>
+  		</h1>
+  	</center>
+  	<p>
+  		<%= @params[:description] %> 
+  	</p>
+  	<p>
+  		<img src = <%= @params[:imgurl] %> />
+  	</p>
+    <p>
+    	<a href = <%= @params[:mapslink] %> >See Location on Map</a>
+    </p>
   </body>
 </html>
