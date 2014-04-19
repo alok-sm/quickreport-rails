@@ -2,6 +2,7 @@ class PostsController < ApplicationController
 
   include TweetHelper
   include AbsolutePathHelper
+  include HashtagHelper
 
   def index
     @posts = Post.all
@@ -30,8 +31,9 @@ class PostsController < ApplicationController
   end
 
   def report(post)
+    hash = getHashTag(post.description)
     tweet(
-      post.description,
+      post.description+' '+hash[1],
       post.image.path,
       post.lattitude,
       post.longitude
@@ -39,11 +41,17 @@ class PostsController < ApplicationController
 
     ReportMailer.mailReport(
       post.description,
+      hash[0],
+      hash[1],
       getAbsolutePath(post.image.url),
       post.lattitude,
       post.longitude,
       "alok.shankar.m@gmail.com"
     ).deliver
+
+    puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$"
+    puts getHashTag(post.description)
+    puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$"
   end
 
 end

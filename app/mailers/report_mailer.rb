@@ -2,6 +2,8 @@ class ReportMailer < ActionMailer::Base
   default from: "ayanareports@gmail.com"
   def mailReport(
 		description,
+    category,
+    hashtag,
 		imgurl,
 		lattitude,
 		longitude,
@@ -9,9 +11,12 @@ class ReportMailer < ActionMailer::Base
   	)
   	link = 'https://maps.google.com/maps?q=' + lattitude.to_s + '%2C' + longitude.to_s + '&z=17'
   	@params = {
+      :description => description
   		:imgurl => imgurl,
-  		:mapslink => link
+  		:mapslink => link,
+      :cat => category,
+      :hash => hashtag
   	}
-  	mail(:to => recipient, :subject => description)
+  	mail(:to => recipient, :subject => Rep)
   end
 end
