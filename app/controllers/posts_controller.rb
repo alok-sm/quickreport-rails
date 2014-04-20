@@ -54,7 +54,7 @@ class PostsController < ApplicationController
       post.tpicurl,
       post.lattitude,
       post.longitude,
-      "alok.shankar.m@gmail.com"
+      "mlabangaloresouth@gmail.com"
     ).deliver
   end
 
