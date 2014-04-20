@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 
+  include StateHelper
   include TweetHelper
   include AbsolutePathHelper
   include HashtagHelper
@@ -18,6 +19,12 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.new(params[:post])
+    hash = getHashTag(@post.description)
+    loc = getState(@post.lattitude, @post.longitude)
+    @post.category = hash[0]
+    @post.hashtag = hash[1]
+    @post.state = loc[:state]
+    @post.statecode = loc[:code]
     @post.save
     redirect_to @post, notice: 'Post was successfully created.'
     report(@post)
@@ -31,27 +38,24 @@ class PostsController < ApplicationController
   end
 
   def report(post)
-    hash = getHashTag(post.description)
-    tweet(
-      post.description+' '+hash[1],
+    t = tweet(
+      post.description+' #'+post.hashtag,
       post.image.path,
       post.lattitude,
       post.longitude
     )
+    post.tpicurl = t.to_hash[:entities][:media][0][:media_url]
+    post.save
 
     ReportMailer.mailReport(
       post.description,
-      hash[0],
-      hash[1],
-      getAbsolutePath(post.image.url),
+      post.category,
+      post.hashtag,
+      post.tpicurl,
       post.lattitude,
       post.longitude,
       "alok.shankar.m@gmail.com"
     ).deliver
-
-    puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$"
-    puts getHashTag(post.description)
-    puts "$$$$$$$$$$$$$$$$$$$$$$$$$$$"
   end
 
 end

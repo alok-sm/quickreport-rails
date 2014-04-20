@@ -11,7 +11,7 @@ $data = [
 			'bribe',
 			'corruption'
 		],
-		:value => '#RepCorruption',
+		:value => 'RepCorruption',
 		:category => 'coruption'
 	},
 	{
@@ -22,7 +22,7 @@ $data = [
 			'women abuse',
 			'rape'
 		],
-		:value => '#RepWomenAbuse',
+		:value => 'RepWomenAbuse',
 		:category => 'women abuse'
 	},
 	{
@@ -33,7 +33,7 @@ $data = [
 			'collision',
 			'accident'
 		],
-		:value => '#RepTrafficProb',
+		:value => 'RepTrafficProb',
 		:category => 'Traffic Violation'
 	},
 	{
@@ -45,7 +45,7 @@ $data = [
 			'sewage',
 			'drainage'
 		],
-		:value => '#RepInfraProb',
+		:value => 'RepInfraProb',
 		:category => 'Infrastructure problem'
 	},
 	{
@@ -57,7 +57,7 @@ $data = [
 			'child worker',
 			'child employee'
 		],
-		:value => '#RepChildAbuse',
+		:value => 'RepChildAbuse',
 		:category => 'child abuse'
 	},
 	{
@@ -67,7 +67,45 @@ $data = [
 			'chain snatch',
 			'murder'
 		],
-		:value => '#RepCrime',
+		:value => 'RepCrime',
 		:category => 'crime'
 	},
 ]
+
+$state = {
+	:AN => 'A&N Islands',
+	:AP => 'Andhra Pradesh',
+	:AC => 'Arunachal Pradesh',
+	:AS => 'Assam',
+	:BI => 'Bihar',
+	:CH => 'Chandigarh',
+	:CG => 'Chhattisgarh',
+	:DN => 'D&N Haveli',
+	:DD => 'Daman & Diu',
+	:DL => 'Delhi',
+	:GO => 'Goa',
+	:GU => 'Gujarat',
+	:HA => 'Haryana',
+	:HP => 'Himachal Pradesh',
+	:JK => 'Jammu & Kashmir',
+	:JH => 'Jharkhand',
+	:KA => 'Karnataka',
+	:KE => 'Kerala',
+	:LK => 'Lakshadweep',
+	:MP => 'Madhya Pradesh',
+	:MH => 'Maharashtra',
+	:MN => 'Manipur',
+	:ME => 'Meghalaya',
+	:MZ => 'Mizoram',
+	:NA => 'Nagaland',
+	:OD => 'Orissa',
+	:PD => 'Pondicherry',
+	:PB => 'Punjab',
+	:RJ => 'Rajasthan',
+	:SI => 'Sikkim',
+	:TN => 'Tamil Nadu',
+	:TR => 'Tripura',
+	:UP => 'Uttar Pradesh',
+	:UA => 'Uttaranchal',
+	:WB => 'West Bengal'
+}

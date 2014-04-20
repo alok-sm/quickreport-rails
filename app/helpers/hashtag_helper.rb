@@ -15,7 +15,7 @@ module HashtagHelper
 				return [d[:category],d[:value]]
 			end
 		end
-		return ['Misc Issues','#RepMiscIssue']
+		return ['Misc Issues','RepMiscIssue']
 	end
 
 end

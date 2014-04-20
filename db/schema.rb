@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140418181403) do
+ActiveRecord::Schema.define(:version => 20140419223438) do
 
   create_table "delete_this", :force => true do |t|
     t.string   "temp"
@@ -29,6 +29,11 @@ ActiveRecord::Schema.define(:version => 20140418181403) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "category"
+    t.string   "hashtag"
+    t.string   "state"
+    t.string   "statecode"
+    t.string   "tpicurl"
   end
 
 end

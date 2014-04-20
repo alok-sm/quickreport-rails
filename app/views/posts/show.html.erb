@@ -16,8 +16,30 @@
 </p>
 
 <p>
+  <b>Category:</b>
+  <%= @post.category %>
+</p>
+
+<p>
+  <b>Hashtag:</b>
+  <%= @post.hashtag %>
+</p>
+
+<p>
+  <b>State Code:</b>
+  <%= @post.statecode %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @post.state %>
+</p>
+
+
+
+<p>
   <b>Image:</b>
-  <%= image_tag(@post.image, size: "320x240") %>
+  <%= image_tag(@post.tpicurl) %>
 </p>
 
 <%= link_to 'Back', posts_path %>

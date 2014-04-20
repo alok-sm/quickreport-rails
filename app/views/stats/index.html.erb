@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/style/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/style/navbar-fixed-top.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/stats"><img src="/logo.png" width="46px" height="46px"/></a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown" >
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">States A-D<b class="caret"></b></a>
+              <ul class="dropdown-menu" >
+                <li><a href="/stats">All India</a></li>
+				<li><a href = "/stats/AN">A&N Islands</a></li>
+				<li><a href = "/stats/AP">Andhra Pradesh</a></li>
+				<li><a href = "/stats/AC">Arunachal Pradesh</a></li>
+				<li><a href = "/stats/AS">Assam</a></li>
+				<li><a href = "/stats/BI">Bihar</a></li>
+				<li><a href = "/stats/CH">Chandigarh</a></li>
+				<li><a href = "/stats/CG">Chhattisgarh</a></li>
+				<li><a href = "/stats/DN">D&N Haveli</a></li>
+				
+				
+				
+			   </ul>
+          </li>
+          <li class="dropdown" >
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Stated D-K<b class="caret"></b></a>
+              <ul class="dropdown-menu" >
+
+              	<li><a href = "/stats/DD">Daman & Diu</a></li>
+				<li><a href = "/stats/DL">Delhi</a></li>
+				<li><a href = "/stats/GO">Goa</a></li>
+              	<li><a href = "/stats/GU">Gujarat</a></li>
+				<li><a href = "/stats/HA">Haryana</a></li>
+				<li><a href = "/stats/HP">Himachal Pradesh</a></li>
+				<li><a href = "/stats/JK">Jammu & Kashmir</a></li>
+				<li><a href = "/stats/JH">Jharkhand</a></li>
+				<li><a href = "/stats/KA">Karnataka</a></li>
+				
+
+               </ul>
+          </li>
+          <li class="dropdown" >
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">States K-O<b class="caret"></b></a>
+              <ul class="dropdown-menu" >
+              	<li><a href = "/stats/KE">Kerala</a></li>
+				<li><a href = "/stats/LK">Lakshadweep</a></li>
+				<li><a href = "/stats/MP">Madhya Pradesh</a></li>
+				<li><a href = "/stats/MH">Maharashtra</a></li>
+				<li><a href = "/stats/MN">Manipur</a></li>
+				<li><a href = "/stats/ME">Meghalaya</a></li>
+              	<li><a href = "/stats/MZ">Mizoram</a></li>
+				<li><a href = "/stats/NA">Nagaland</a></li>
+				<li><a href = "/stats/OD">Orissa</a></li>
+              </ul>
+          </li>
+          <li class="dropdown" >
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">States P-W<b class="caret"></b></a>
+              <ul class="dropdown-menu" >
+              	
+				
+				<li><a href = "/stats/PD">Pondicherry</a></li>
+				<li><a href = "/stats/PB">Punjab</a></li>
+				<li><a href = "/stats/RJ">Rajasthan</a></li>
+				<li><a href = "/stats/SI">Sikkim</a></li>
+				<li><a href = "/stats/TN">Tamil Nadu</a></li>
+				<li><a href = "/stats/TR">Tripura</a></li>
+				<li><a href = "/stats/UP">Uttar Pradesh</a></li>
+				<li><a href = "/stats/UA">Uttaranchal</a></li>
+				<li><a href = "/stats/WB">West Bengal</a></li>
+        </ul>
+            </li>
+
+
+            <li class="dropdown" >
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Issue Categories<b class="caret"></b></a>
+              <ul class="dropdown-menu" >
+                
+        
+        <li><a href = "/stats/RepCorruption">Corruption</a></li>
+        <li><a href = "/stats/RepWomenAbuse">Women Abuse</a></li>
+        <li><a href = "/stats/RepTrafficProb">Traffic Problems</a></li>
+        <li><a href = "/stats/RepInfraProb">Infrastructure issues</a></li>
+        <li><a href = "/stats/RepChildAbuse">Child Abuse</a></li>
+        <li><a href = "/stats/RepCrime">Crime</a></li>
+        <li><a href = "/stats/RepMiscIssue">Misc</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div class="container">
+
+      <!-- Main component for a primary marketing message or call to action -->
+      <div class="jumbotron">
+       <center><p>
+	<img src=<%= @pie %> style="max-width:100%; max-height:100%;"/>
+</p><br/>
+<p>
+	<img src=<%= @bar %> style="max-width:100%; max-height:100%;"/>
+</p></center>
+      </div>
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/style/jquery-1.10.2.min.js"></script>
+    <script src="/style/bootstrap.min.js"></script>
+  </body>
+</html>
