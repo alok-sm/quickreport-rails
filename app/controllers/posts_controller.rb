@@ -26,7 +26,7 @@ class PostsController < ApplicationController
     @post.state = loc[:state]
     @post.statecode = loc[:code]
     @post.save
-    redirect_to @post, notice: 'Post was successfully created.'
+    redirect_to @post
     report(@post)
   end
 

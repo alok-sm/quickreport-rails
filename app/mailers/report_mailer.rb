@@ -17,9 +17,4 @@ class ReportMailer < ActionMailer::Base
       :cat => category,
       :hash => hashtag
   	}
-  	mail(:to => recipient, :subject => 'New Report for '+
-      category+
-      ' on '
-    )
-  end
-end
+  	mail(:to => recipient, :subject => 'New Report for '+category
